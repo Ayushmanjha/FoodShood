@@ -1,3 +1,7 @@
+import { Outlet } from "react-router-dom";
+import ProfileFunction from "./ProfileFunctional";
+import ProfileClass from "./ProfileClass";
+
 const About = () => {
   return (
     <>
@@ -34,6 +38,11 @@ const About = () => {
         experience, Food-shood has undoubtedly left an indelible mark on the
         lives of food lovers everywhere.
       </p>
+
+      <ProfileFunction name={"Ayushman"} />
+      <ProfileClass naam={"Ayushman"} />
+
+      <Outlet />
     </>
   );
 };

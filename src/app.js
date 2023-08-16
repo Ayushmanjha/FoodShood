@@ -9,6 +9,9 @@ import Contact from "./Components/Contact";
 import RestrauntMenu from "./Components/RestrauntMenu";
 import Error from "./Components/error";
 
+import Profile from "./Components/ProfileFunctional";
+import ProfileClass from "./Components/ProfileClass";
+
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const heading = <h1 id="title">Namaste 🙏 React</h1>;
@@ -37,6 +40,12 @@ const Applayout = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+        children: [
+          {
+            path: "profile",
+            element: <ProfileClass />,
+          },
+        ],
       },
       {
         path: "/contact",

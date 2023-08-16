@@ -19,10 +19,10 @@ const RestrauntMenu = () => {
         "&catalog_qa=undefined&submitAction=ENTER"
     );
     const json = await Data.json();
-    // console.log(json?.data);
-    console.log(id);
+    console.log(json?.data);
+    //  console.log(id);
     setRestraunt(json);
-    console.log(json?.data?.cards[0]?.card?.card?.info?.name);
+    // console.log(json?.data?.cards[0]?.card?.card?.info?.name);
   }
 
   return (
