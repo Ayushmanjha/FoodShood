@@ -1,10 +1,11 @@
-import React from "react";
+import { Component } from "react";
 
-class ProfileClass extends React.Component {
+class ProfileClass extends Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
     console.log("constructor");
+    //console.log(this.props);
   }
 
   componentDidMount() {

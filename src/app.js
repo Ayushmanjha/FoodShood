@@ -13,6 +13,7 @@ import Profile from "./Components/ProfileFunctional";
 import ProfileClass from "./Components/ProfileClass";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import ProfileFunction from "./Components/ProfileFunctional";
 
 const heading = <h1 id="title">Namaste 🙏 React</h1>;
 
@@ -54,6 +55,10 @@ const Applayout = createBrowserRouter([
       {
         path: "/restraunt/:id",
         element: <RestrauntMenu />,
+      },
+      {
+        path: "/functionProfile",
+        element: <ProfileFunction />,
       },
     ],
   },

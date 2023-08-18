@@ -1,29 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import useRestrauntMenu from "../Utility/useRestrauntMenu";
 
 import { restraunt_IMG_CDN } from "../config";
 import Shimmer from "./ShimmerUI";
 
 const RestrauntMenu = () => {
   const { id } = useParams();
-  const [restraunt, setRestraunt] = useState([]);
 
-  useEffect(() => {
-    getRestrauntInfo();
-  }, []);
-
-  async function getRestrauntInfo() {
-    const Data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6313407&lng=77.2198645&restaurantId=" +
-        id +
-        "&catalog_qa=undefined&submitAction=ENTER"
-    );
-    const json = await Data.json();
-    console.log(json?.data);
-    //  console.log(id);
-    setRestraunt(json);
-    // console.log(json?.data?.cards[0]?.card?.card?.info?.name);
-  }
+  //this is the custom hook for fetching the restraunt details
+  const restraunt = useRestrauntMenu(id);
 
   return (
     <>

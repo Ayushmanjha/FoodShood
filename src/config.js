@@ -1,6 +1,9 @@
 export const restraunt_IMG_CDN =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
+export const FETCH_RESTRAUNTMENU_API_URL =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6313407&lng=77.2198645&restaurantId=";
+
 export const RestrauntData = [
   {
     type: "restaurant",
