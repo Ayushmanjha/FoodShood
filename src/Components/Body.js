@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { RestrauntData } from "../config";
+import useRestrauntData from "../Utility/useRestrauntData";
 import Restrauntcard from "./RestrauntCard";
 import Shimmer from "./ShimmerUI";
+import useOffline from "../Utility/useOffline";
 
 function Filterdata(searchtex, restraunts) {
   const lowerSearchText = searchtex.toLowerCase();
@@ -16,6 +18,17 @@ const Body = () => {
   const [filteredRestraunts, setFilteredRestraunts] = useState([]);
   const [allRestraunts, setALlRestraunts] = useState([]);
   const [serchText, setSerchText] = useState("");
+
+  // const offline = useOffline;
+
+  // if (offline) {
+  //   return (
+  //     <h1>
+  //       🔴 Seems you are Offline, <br />
+  //       Check your Internet Connectivity
+  //     </h1>
+  //   );
+  // }
 
   useEffect(() => {
     fetchApiData();
